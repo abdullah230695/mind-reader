@@ -1,0 +1,196 @@
+/* General Page Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    background: linear-gradient(120deg, #ff9a9e, #fad0c4);
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container Box */
+.container {
+    background: rgb(0, 0, 0);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Title */
+h1 {
+    color: #ffffff;
+    font-size: 26px;
+    animation: popIn 1s ease-in-out;
+}
+
+/* Instructions Box */
+.instructions {
+    padding: 15px;
+    border-radius: 12px;
+    color: #111010;
+    font-size: 18px;
+    margin-bottom: 20px;
+    animation: bgColorChange 4s infinite alternate;
+}
+
+/* Background Color Animation */
+@keyframes bgColorChange {
+    0% {
+        background: #54e611;
+    }
+
+    50% {
+        background: #ffffff;
+    }
+
+    100% {
+        background: #f19a04;
+    }
+}
+
+/* Instructions List */
+.instructions ul {
+    list-style: none;
+    padding: 0;
+}
+
+.instructions li {
+    text-align: left;
+    margin: 8px 0;
+    font-size: 16px;
+}
+
+/* Input Field */
+.input-field {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 18px;
+    border-radius: 8px;
+    border: 2px solid #ff758c;
+    transition: 0.3s;
+}
+
+/* Input Focus Effect */
+.input-field:focus {
+    border-color: #ff5252;
+    outline: none;
+    box-shadow: 0px 0px 10px rgba(255, 82, 82, 0.5);
+}
+
+/* Button */
+.btn {
+    background: #ff5252;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+/* Button Hover */
+.btn:hover {
+    background: #e04040;
+    box-shadow: 0px 5px 15px rgba(255, 82, 82, 0.3);
+    transform: scale(1.05);
+}
+
+/* Result Text */
+.result {
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 15px;
+    color: #ffea07;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    animation: randomOpacity 1s ease-in-out infinite;
+}
+
+@keyframes randomOpacity {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+}
+
+/* Bounce Animation for Result */
+@keyframes bounce {
+    0% {
+        transform: scale(1);
+        opacity: 0;
+    }
+
+    50% {
+        transform: scale(1.3);
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.bounce {
+    animation: bounce 0.8s ease-in-out;
+}
+
+/* Spinner (Thinking Animation) */
+@keyframes thinkingAnimation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(360deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+/* Spinner effect */
+.spinner {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #ff5252;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: thinkingAnimation 2s linear infinite;
+    margin: 10px auto;
+    display: none;
+    /* Initially hidden */
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+}

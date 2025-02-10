@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magic Number Trick 🎩</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1 class="fade-in">🔮 I'm gonna read your mind 🔮</h1>
+
+        <div class="instructions">
+            <h2>Follow These Steps</h2>
+            <ul>
+                <li>1️⃣ <strong>Pick any number</strong> between <strong>0 and 99999999999</strong> (e.g., 5) </li>
+                <li>2️⃣ <strong>Multiply it by 2</strong> → 5 × 2 = <strong>10</strong> </li>
+                <li>3️⃣ <strong>Add 8</strong> → 10 + 8 = <strong>18</strong> </li>
+                <li>4️⃣ <strong>Divide by 2</strong> → 18 ÷ 2 = <strong>9</strong> </li>
+                <li>5️⃣ <strong>Enter your final answer below!</strong>
+            </ul>
+
+        </div>
+
+        <input type="number" id="finalAnswer" placeholder="Enter final answer" class="input-field">
+        <br>
+        <button onclick="revealNumber()" class="btn">Click to Read Your Mind</button>
+
+         <div id="thinking" class="spinner"></div>
+
+        <p class="result fade-in" id="result"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
